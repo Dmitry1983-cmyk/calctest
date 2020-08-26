@@ -12,6 +12,9 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
+        double x;
+        double y;
+        int tmp;
         public Form1()
         {
             InitializeComponent();
@@ -46,11 +49,15 @@ namespace Calculator
         private void btnCancel_Click(object sender, EventArgs e)
         {
             txtInput.Clear();
+            lblNum.Text = "";
+            x = 0;
+            tmp = 0;
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-
+            Calc();
+            lblNum.Text = "";
         }
 
         private void btnTripleZero_Click(object sender, EventArgs e)
@@ -75,21 +82,72 @@ namespace Calculator
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
+            if(txtInput.Text!="")
+            {
+                x = Convert.ToDouble(txtInput.Text);
+                tmp = 1;
+                lblNum.Text = x.ToString() + " + ";
+                txtInput.Clear();
+            }
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-
+            if (txtInput.Text != "")
+            {
+                x = Convert.ToDouble(txtInput.Text);
+                tmp = 2;
+                lblNum.Text = x.ToString() + " - ";
+                txtInput.Clear();
+            }
         }
 
         private void btnMul_Click(object sender, EventArgs e)
         {
-
+            if (txtInput.Text != "")
+            {
+                x = Convert.ToDouble(txtInput.Text);
+                tmp = 3;
+                lblNum.Text = x.ToString() + " x ";
+                txtInput.Clear();
+            }
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
+            if (txtInput.Text != "")
+            {
+                x = Convert.ToDouble(txtInput.Text);
+                tmp = 4;
+                lblNum.Text = x.ToString() + " / ";
+                txtInput.Clear();
+            }
+        }
+
+        private void Calc()
+        {
+            switch (tmp)
+            {
+                case 1:
+                    y = x + float.Parse(txtInput.Text);
+                    txtInput.Text = y.ToString();
+                    break;
+                case 2:
+                    y = x - float.Parse(txtInput.Text);
+                    txtInput.Text = y.ToString();
+                    break;
+                case 3:
+                    y = x * float.Parse(txtInput.Text);
+                    txtInput.Text = y.ToString();
+                    break;
+                case 4:
+                    y = x / float.Parse(txtInput.Text);
+                    txtInput.Text = y.ToString();
+                    break;
+
+                default:
+                    break;
+            }
 
         }
     }

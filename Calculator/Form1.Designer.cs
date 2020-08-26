@@ -41,6 +41,7 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.btnEqual = new System.Windows.Forms.Button();
             this.btnPoint = new System.Windows.Forms.Button();
+            this.lblNum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtInput
@@ -181,11 +182,21 @@
             this.btnPoint.UseVisualStyleBackColor = true;
             this.btnPoint.Click += new System.EventHandler(this.btnPoint_Click);
             // 
+            // lblNum
+            // 
+            this.lblNum.AutoSize = true;
+            this.lblNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNum.Location = new System.Drawing.Point(12, 19);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(0, 31);
+            this.lblNum.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNum);
             this.Controls.Add(this.btnPoint);
             this.Controls.Add(this.btnEqual);
             this.Controls.Add(this.btnNext);
@@ -221,6 +232,7 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnEqual;
         private System.Windows.Forms.Button btnPoint;
+        private System.Windows.Forms.Label lblNum;
     }
 }
 

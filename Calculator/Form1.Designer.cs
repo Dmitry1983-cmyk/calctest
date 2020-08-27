@@ -134,7 +134,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCancel.Location = new System.Drawing.Point(262, 60);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(60, 207);
+            this.btnCancel.Size = new System.Drawing.Size(60, 160);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "C";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@
             this.btnEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnEqual.Location = new System.Drawing.Point(197, 227);
             this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(60, 40);
+            this.btnEqual.Size = new System.Drawing.Size(123, 40);
             this.btnEqual.TabIndex = 11;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = true;
